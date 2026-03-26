@@ -21,6 +21,7 @@ export default function Admin() {
   });
 
   const [projects, setProjects] = useState([]);
+  const [activeAddProject, setActiveProject] = useState([]); // will use later
 
   // 📡 Fetch Projects
   const fetchProjects = async () => {
@@ -66,6 +67,7 @@ export default function Admin() {
             setForm({ ...form, title: e.target.value })
           }
           sx={{ mr: 2 }}
+          size="small"
         />
 
         <TextField
@@ -75,6 +77,7 @@ export default function Admin() {
             setForm({ ...form, description: e.target.value })
           }
           sx={{ mr: 2 }}
+          size="small"
         />
 
         <Button variant="contained" onClick={handleAdd}>

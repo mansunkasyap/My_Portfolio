@@ -1,0 +1,15 @@
+// middleware.js
+import { NextResponse } from "next/server";
+
+export function middleware(req) {
+  const token = req.cookies.get("token");
+    
+  if (!token) {
+    return NextResponse.redirect(new URL("/login", req.url));
+  }
+}
+
+// Apply only on admin routes
+export const config = {
+  matcher: ["/admin/:path*"],
+};
