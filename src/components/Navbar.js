@@ -1,28 +1,35 @@
 "use client";
 
-import { AppBar, Toolbar, Typography, Button } from "@mui/material";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Button,
+  IconButton,
+} from "@mui/material";
+import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Link from "next/link";
 
-export default function Navbar() {
+
+export default function Navbar({ toggleTheme }) {
   return (
     <AppBar position="static">
       <Toolbar>
-        <Typography variant="h6" sx={{ flexGrow: 1 }}>
+        <Typography sx={{ flexGrow: 1 }}>
           My Portfolio
         </Typography>
 
         <Button color="inherit" component={Link} href="/">
           Home
         </Button>
-        <Button color="inherit" component={Link} href="/about">
-          About
-        </Button>
+
         <Button color="inherit" component={Link} href="/projects">
           Projects
         </Button>
-        <Button color="inherit" component={Link} href="/contact">
-          Contact
-        </Button>
+
+        <IconButton color="inherit" onClick={toggleTheme}>
+          <Brightness4Icon />
+        </IconButton>
       </Toolbar>
     </AppBar>
   );
