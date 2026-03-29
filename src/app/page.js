@@ -32,7 +32,7 @@ export default function Home() {
           }}
         >
           <Typography variant="h3" fontWeight="bold">
-            Hi, I'm Kasyap 👋
+            Hi, I'm Mansun Kasyap 👋
           </Typography>
 
           <Typography variant="h6" sx={{ mt: 2 }}>
